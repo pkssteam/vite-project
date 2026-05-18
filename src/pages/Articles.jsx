@@ -14,7 +14,7 @@ export default function Articles() {
       <div className="page-header">
         <div className="header-meta">
           <span className="badge badge-accent">Typography & Layout Sandbox</span>
-          <h1>Structured Editorial & Text Testing</h1>
+          <h1>Structured Editorial </h1>
         </div>
         <p className="subtitle">
           A rich page structure containing standard typography tokens. Use this to verify text scaling, container wrapping, headings hierarchy, and table padding.
@@ -26,24 +26,24 @@ export default function Articles() {
         <div className="controls-grid">
           <div className="control-group">
             <label>Text Scaling: {fontSizeMultiplier.toFixed(2)}x</label>
-            <input 
-              type="range" 
-              min="0.8" 
-              max="1.4" 
-              step="0.05" 
-              value={fontSizeMultiplier} 
-              onChange={(e) => setFontSizeMultiplier(parseFloat(e.target.value))} 
+            <input
+              type="range"
+              min="0.8"
+              max="1.4"
+              step="0.05"
+              value={fontSizeMultiplier}
+              onChange={(e) => setFontSizeMultiplier(parseFloat(e.target.value))}
             />
           </div>
           <div className="control-group">
             <label>Line Height: {lineHeight.toFixed(2)}</label>
-            <input 
-              type="range" 
-              min="1.2" 
-              max="1.9" 
-              step="0.05" 
-              value={lineHeight} 
-              onChange={(e) => setLineHeight(parseFloat(e.target.value))} 
+            <input
+              type="range"
+              min="1.2"
+              max="1.9"
+              step="0.05"
+              value={lineHeight}
+              onChange={(e) => setLineHeight(parseFloat(e.target.value))}
             />
           </div>
           <button className="btn btn-outline reset-btn" onClick={resetTypography}>Reset Styling</button>
@@ -51,11 +51,11 @@ export default function Articles() {
       </div>
 
       {/* Styled text container */}
-      <div 
-        className="editorial-body widget-card" 
-        style={{ 
+      <div
+        className="editorial-body widget-card"
+        style={{
           fontSize: `${18 * fontSizeMultiplier}px`,
-          lineHeight: lineHeight 
+          lineHeight: lineHeight
         }}
       >
         <header className="article-header">
