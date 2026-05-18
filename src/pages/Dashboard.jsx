@@ -30,7 +30,7 @@ export default function Dashboard() {
         const nextVal = Math.max(15, Math.min(95, prev[prev.length - 1] + (Math.random() * 24 - 12)));
         return [...prev.slice(1), Math.round(nextVal)];
       });
-      
+
       if (Math.random() > 0.7) {
         const logTypes = ['info', 'warning', 'success', 'error'];
         const msgs = [
@@ -43,7 +43,7 @@ export default function Dashboard() {
         const randomType = logTypes[Math.floor(Math.random() * logTypes.length)];
         const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
         const timeStr = new Date().toTimeString().split(' ')[0];
-        
+
         setLogs(prev => [
           { time: timeStr, type: randomType, msg: randomMsg },
           ...prev.slice(0, 4)
@@ -60,7 +60,7 @@ export default function Dashboard() {
     const height = 80;
     const maxVal = 100;
     const pointsCount = statusHistory.length;
-    
+
     return statusHistory.map((val, idx) => {
       const x = (idx / (pointsCount - 1)) * width;
       const y = height - (val / maxVal) * height + 5; // offset slightly
@@ -72,7 +72,7 @@ export default function Dashboard() {
     <div className="page-content dashboard-page">
       <div className="page-header">
         <div className="header-meta">
-          <span className="badge badge-accent">Live Monitor</span>
+          <span className="badge badge-accent">Live Monitor system</span>
           <h1>Systems Health Dashboard</h1>
         </div>
         <p className="subtitle">
@@ -93,8 +93,8 @@ export default function Dashboard() {
             <span className="stat-label">CPU Utilization</span>
             <h2 className="stat-value">{cpuUsage}%</h2>
             <div className="progress-bar-container">
-              <div 
-                className={`progress-bar ${cpuUsage > 80 ? 'critical' : cpuUsage > 60 ? 'warning' : 'healthy'}`} 
+              <div
+                className={`progress-bar ${cpuUsage > 80 ? 'critical' : cpuUsage > 60 ? 'warning' : 'healthy'}`}
                 style={{ width: `${cpuUsage}%` }}
               ></div>
             </div>
@@ -111,8 +111,8 @@ export default function Dashboard() {
             <span className="stat-label">Memory Usage</span>
             <h2 className="stat-value">{memoryUsage}%</h2>
             <div className="progress-bar-container">
-              <div 
-                className="progress-bar healthy" 
+              <div
+                className="progress-bar healthy"
                 style={{ width: `${memoryUsage}%` }}
               ></div>
             </div>
@@ -167,7 +167,7 @@ export default function Dashboard() {
               <line x1="0" y1="22.5" x2="300" y2="22.5" stroke="var(--border)" strokeDasharray="3 3" />
               <line x1="0" y1="45" x2="300" y2="45" stroke="var(--border)" strokeDasharray="3 3" />
               <line x1="0" y1="67.5" x2="300" y2="67.5" stroke="var(--border)" strokeDasharray="3 3" />
-              
+
               {/* Spark Area */}
               <path
                 d={`${getSparklinePath()} L 300 90 L 0 90 Z`}
@@ -182,7 +182,7 @@ export default function Dashboard() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-              
+
               {/* Pulse at latest point */}
               <circle
                 cx={300}
