@@ -1,0 +1,97 @@
+:root {
+  --text: #334155; /* Slate-700 */
+  --text-h: #0f172a; /* Slate-900 */
+  --bg: #f8fafc; /* Premium off-white slate background */
+  --border: #e2e8f0; /* Slate-200 */
+  --code-bg: #f1f5f9; /* Slate-100 */
+  --accent: #7c3aed; /* Violet-600 */
+  --accent-bg: rgba(124, 58, 237, 0.08);
+  --accent-border: rgba(124, 58, 237, 0.3);
+  --social-bg: rgba(241, 245, 249, 0.7);
+  --shadow:
+    rgba(0, 0, 0, 0.03) 0 4px 6px -1px, rgba(0, 0, 0, 0.05) 0 10px 15px -3px;
+
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Outfit', 'Inter', system-ui, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  font: 16px/150% var(--sans);
+  letter-spacing: 0.1px;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+}
+
+#root {
+  width: 1120px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  border-inline: 1px solid var(--border);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Core container is pure white */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.02);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  margin: 24px 0;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+    margin: 16px 0;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: #0f172a;
+  font-size: 14px;
+  line-height: 135%;
+  padding: 3px 6px;
+  background: var(--code-bg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
