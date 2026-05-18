@@ -8,7 +8,7 @@ export default function Dashboard() {
   const [logs, setLogs] = useState([
     { time: '09:30:12', type: 'info', msg: 'System check complete. All services healthy.' },
     { time: '09:31:05', type: 'warning', msg: 'High disk latency detected on node-c4.' },
-    { time: '09:32:44', type: 'success', msg: 'Backup synchronization completed successfully.' }
+    { time: '09:32:44', type: 'success', msg: 'Backup synchronization completed successful.' }
   ]);
 
   // Simulate real-time updates for visual test dynamism
